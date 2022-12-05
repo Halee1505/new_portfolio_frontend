@@ -1,0 +1,108 @@
+.album__overlay {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.album__image {
+    height: 18vw;
+    width: 18vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.card {
+    height: max-content;
+    transition: all 0.5s ease-in-out;
+    border: 0px;
+    margin-bottom: 10px;
+}
+
+.album__image:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 4px;
+    border: 1px solid #d5d5d5;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #b0b0b0;
+}
+
+
+.card__header {
+    cursor: pointer;
+}
+
+@media (max-width: 350px) {
+    .album__overlay {
+        height: 90vh;
+    }
+
+    .album__image {
+        height: 85vw;
+        width: 85vw;
+    }
+}
+
+@media (max-width: 550px) and (min-width: 350px) {
+    .album__overlay {
+        height: 90vh;
+    }
+
+    .album__image {
+        height: 85vw;
+        width: 85vw;
+    }
+}
+
+@media (max-width: 880px) and (min-width: 550px) {
+    .album__overlay {
+        height: 90vh;
+    }
+
+    .album__image {
+        height: 46vw;
+        width: 46vw;
+    }
+}
+
+
+@media (max-width: 1310px) and (min-width: 880px) {
+    .album__overlay {
+        height: 95vh;
+    }
+
+    .album__image {
+        height: 35vw;
+        width: 35vw;
+    }
+}
+
+@media (max-width: 1748px) and (min-width: 1311px) {
+    .album__overlay {
+        height: 95vh;
+    }
+
+    .album__image {
+        height: 22vw;
+        width: 22vw;
+    }
+}

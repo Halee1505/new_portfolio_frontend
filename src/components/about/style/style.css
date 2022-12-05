@@ -1,0 +1,96 @@
+.about__overlay {
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: UTM;
+    overflow-y: auto;
+    /* padding-top: 40px; */
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 4px;
+    border: 1px solid #d5d5d5;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #b0b0b0;
+}
+
+.about__title {
+    padding-top: 30px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.about-contact {
+    border-right: solid 2px #ccc;
+}
+
+.about-contact i, a, p {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.about-contact p, a {
+
+    font-weight: 400;
+}
+
+.about-contact div {
+    padding-bottom: 10px;
+}
+
+
+p {
+    margin: 0;
+}
+
+.icon {
+    font-size: 1.3rem;
+}
+
+.fa-graduation-cap, .fa-address-card {
+    font-size: 30px !important;
+}
+
+@media (max-width: 880px) {
+    .about-contact h4, h5 {
+        font-size: 15px;
+    }
+
+
+
+    .about-contact {
+        height: max-content;
+        border-bottom: #ccc 1px solid;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 880px) {
+    .about-contact h4, h5 {
+        font-size: 25px;
+    }
+
+
+
+    .about-contact {
+        height: max-content;
+        border-bottom: #ccc 1px solid;
+        margin-bottom: 20px;
+    }
+}

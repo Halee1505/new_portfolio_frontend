@@ -1,0 +1,144 @@
+::-webkit-scrollbar {
+    width: 0px;
+    height: 4px;
+    border: 1px solid #d5d5d5;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #b0b0b0;
+}
+
+.images_overlay {
+
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+.show_image {
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.show_image:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+@keyframes showTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.show_1 {
+    animation: showImage1 1s ease-in-out;
+}
+
+@keyframes showImage1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.show_2 {
+    animation: showImage2 1s ease-in-out;
+}
+
+@keyframes showImage2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.show_3 {
+    animation: showImage3 1s ease-in-out;
+}
+
+@keyframes showImage3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    60% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.show_4 {
+    animation: showImage4 1s ease-in-out;
+}
+
+@keyframes showImage4 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@media (max-width: 880px) {
+    .images_overlay {
+        height: 90vh;
+    }
+
+    .images_overlay {
+        padding-top: 10px;
+    }
+}

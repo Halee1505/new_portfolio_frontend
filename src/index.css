@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'UTM';
+  src: url("./font/UTMWindsorBT.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: UTM, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
