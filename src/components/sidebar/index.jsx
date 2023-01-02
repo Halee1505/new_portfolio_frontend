@@ -1,10 +1,17 @@
 import "./style/style.css";
 import { useNavigate } from "react-router-dom";
+import Upload from "../Upload";
+import { useState } from "react";
 
 export default function SideBar({ handlePage, handleChangePage, close }) {
   const navigate = useNavigate();
+  const [showUpload, setShowUpload] = useState(false);
   return (
     <div className="SideBar bg-white border-end">
+      {showUpload && (
+        <Upload setShowUpload={setShowUpload} showUpload={showUpload} />
+      )}
+
       <div className="row p-4">
         <div className="col-12 d-flex justify-content-end">
           <i
@@ -17,7 +24,11 @@ export default function SideBar({ handlePage, handleChangePage, close }) {
         <div className="col-12 d-flex justify-content-center">
           <div
             className="SideBar_logo"
+            onClick={() => {
+              setShowUpload(true);
+            }}
             style={{
+              cursor: "pointer",
               backgroundImage:
                 "url(http://res.cloudinary.com/vitamim/image/upload/v1641982851/aootf0lsclxzlmedbvlo.jpg)",
             }}
