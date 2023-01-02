@@ -69,7 +69,7 @@ const Upload = ({ setShowUpload, showUpload }) => {
                 alert("Upload thành công");
                 setLoading(false);
                 setShowUpload(false);
-                window.location.href = "/album";
+                window.location.href = "/";
               })
               .catch((err) => {
                 console.log(err);
