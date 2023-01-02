@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Resizer from "react-image-file-resizer";
+import "./style.css";
 import axios from "axios";
 const style = {
   height: "160px",
@@ -55,20 +56,38 @@ const Upload = ({ setShowUpload, showUpload }) => {
     if (!gallery) return alert("Vui lòng nhập tên bộ sưu tập");
     if (file.length === 0) return alert("Vui lòng chọn ảnh");
     setLoading(true);
-    Promise.all(file.map((item) => resizeFile(item))).then((res) => {
-      Promise.all(res.map((item) => Upload(item))).then((res) => {
-        axios
-          .post("https://new-portfolio-halee1505.vercel.app/upload", {
-            path: res,
-            gallery: gallery,
+    Promise.all(file.map((item) => resizeFile(item)))
+      .then((res) => {
+        Promise.all(res.map((item) => Upload(item)))
+          .then((res) => {
+            axios
+              .post("https://new-portfolio-halee1505.vercel.app/upload", {
+                path: res,
+                gallery: gallery,
+              })
+              .then(() => {
+                alert("Upload thành công");
+                setLoading(false);
+                setShowUpload(false);
+                window.location.href = "/album";
+              })
+              .catch((err) => {
+                console.log(err);
+                alert("Upload thất bại");
+                setLoading(false);
+              });
           })
-          .then(() => {
-            alert("Upload thành công");
+          .catch((err) => {
+            console.log(err);
+            alert("Upload thất bại");
             setLoading(false);
-            setShowUpload(false);
           });
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Upload thất bại");
+        setLoading(false);
       });
-    });
   };
   return (
     <div
@@ -112,13 +131,7 @@ const Upload = ({ setShowUpload, showUpload }) => {
               zIndex: 999,
             }}
           >
-            <i
-              style={{
-                fontSize: "30px",
-                color: "#fff",
-              }}
-              className="fa-solid fa-spinner"
-            ></i>
+            <i className="fa-solid fa-spinner loading"></i>
           </div>
         )}
         <div
@@ -143,6 +156,7 @@ const Upload = ({ setShowUpload, showUpload }) => {
               padding: "0 10px",
               marginLeft: "10px",
             }}
+            accept="image/*"
             value={gallery}
             onChange={(e) => {
               setGallery(e.target.value);
