@@ -52,6 +52,7 @@ export default function HomePage({ curPage }) {
             </div>
             <div className="col-12">
               <Home
+                isMobile={true}
                 handlePage={page}
                 handleChangePage={setPage}
                 className="page"
@@ -85,6 +86,7 @@ export default function HomePage({ curPage }) {
             </div>
             <div className="col-9">
               <Home
+                isMobile={false}
                 handlePage={page}
                 handleChangePage={setPage}
                 className="page"

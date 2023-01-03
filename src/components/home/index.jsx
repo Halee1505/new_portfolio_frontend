@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Home({
+  isMobile,
   handlePage,
   className,
   style,
@@ -19,7 +20,17 @@ export default function Home({
   }, [handlePage]);
 
   return (
-    <div className={"home__overlay " + className} style={style}>
+    <div
+      className={"home__overlay " + className}
+      style={
+        !isMobile
+          ? style
+          : {
+              ...style,
+              backgroundPosition: "right",
+            }
+      }
+    >
       <h2
         className="title__1"
         style={
