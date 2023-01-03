@@ -13,3 +13,6 @@ to = "/"
 [[redirects]]
 from = "/contact"
 to = "/"
+[[redirects]]
+from = "/album/*"
+to = "/"
