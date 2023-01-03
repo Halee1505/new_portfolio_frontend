@@ -6,7 +6,7 @@ from = "/album"
 to = "/"
 [[redirects]]
 from = "/skills"
-to = "/"
+to = "/skills"
 [[redirects]]
 from = "/experience"
 to = "/"
