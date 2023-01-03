@@ -2,3 +2,14 @@
 from = "/about"
 to = "/"
 [[redirects]]
+from = "/album"
+to = "/"
+[[redirects]]
+from = "/skills"
+to = "/"
+[[redirects]]
+from = "/experience"
+to = "/"
+[[redirects]]
+from = "/contact"
+to = "/"
