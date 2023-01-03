@@ -21,18 +21,15 @@ export default function Home({
 
   return (
     <div
-      className={"home__overlay " + className}
-      style={
-        !isMobile
-          ? style
-          : {
-              ...style,
-              backgroundPosition: "right",
-            }
+      className={
+        isMobile
+          ? "home__overlay--mobile " + className
+          : "home__overlay " + className
       }
+      style={style}
     >
       <h2
-        className="title__1"
+        className="title"
         style={
           isHome
             ? { animation: "title__1 1s ease-out forwards" }
@@ -42,7 +39,7 @@ export default function Home({
         I am
       </h2>
       <h1
-        className="title__2"
+        className="title"
         style={
           isHome
             ? { animation: "title__2 1.5s ease-out forwards" }
@@ -52,7 +49,7 @@ export default function Home({
         a Fullstack Web Developer
       </h1>
       <h1
-        className="title__3"
+        className="title"
         style={
           isHome
             ? { animation: "title__3 2s ease-out forwards" }

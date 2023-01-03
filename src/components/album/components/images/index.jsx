@@ -41,7 +41,11 @@ export default function Images() {
 
   return (
     <div className="images_overlay">
-      {open ? <ImageDetail image={image} closeHandler={setOpen} /> : ""}
+      {open ? (
+        <ImageDetail images={images} img={image} closeHandler={setOpen} />
+      ) : (
+        ""
+      )}
       <div className="row">
         <div
           className="col-md-12"
